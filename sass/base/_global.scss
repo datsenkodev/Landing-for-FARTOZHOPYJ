@@ -1,0 +1,117 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: Montserrat, sans-serif;
+}
+html{
+   overflow-x: hidden;
+   scrollbar-width: thin;
+	scrollbar-color: #242424 rgba(0, 0, 0, 0.6);
+}
+img{
+    font-style: italic;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+a{
+    color: #FFF;
+}
+*:focus {
+    outline: none;
+}
+
+//font variables
+$text-8: .5rem;
+$text-12: .750rem;
+$text-14: .875rem;
+$text-16: 1rem;
+$text-18: 1.125rem;
+$text-20: 1.25rem;
+$text-22: 1.375rem;
+$text-24: 1.5rem;
+$text-26: 1.625rem;
+$text-28: 1.750rem;
+$text-30: 1.875rem;
+$text-32: 2rem;
+$text-34: 2.125rem;
+$text-36: 2.25rem;
+$text-38: 2.375rem;
+$text-40: 2.5rem;
+$text-42: 2.625rem;
+$text-44: 2.750rem;
+$text-46: 2.875rem;
+$text-48: 3rem;
+$text-52: 3.25rem;
+$text-56: 3.5rem;
+$text-60: 3.75rem;
+$text-64: 4rem;
+$text-80: 5rem;
+$container-width: min(100% - 4rem, 1400px);
+// Classes
+:root {}
+
+@mixin centeredPseudoElement{
+    position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+.container {
+    width: $container-width;
+    margin: 0 auto;
+}
+
+body {
+	color: #FFF;
+	background: #171717;
+    min-height: 100svh;
+    overflow-x: clip;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+.section-small{
+	font-weight: 700;
+	font-size: $text-20;
+	color: #fff;
+}
+
+.section-title{
+	font-weight: 700;
+	font-size: $text-80;
+	line-height: 112%;
+	text-transform: uppercase;
+	color: #fff;
+	margin: 1rem 0;
+}
+
+.section-text{
+	font-weight: 400;
+	font-size: $text-22;
+	color: #fff;
+}
+
+.btn{
+	background: #1347bb;
+	border-radius: 114px;
+	padding: 1rem 2rem;
+	display: flex;
+	gap: .5rem;
+   cursor: pointer;
+   font-weight: 700;
+	font-size: 32px;
+	color: #fff;
+}
+
