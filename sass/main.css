@@ -39,9 +39,11 @@ a {
 
 body {
   color: #FFF;
-  background: #171717;
+  background: #080808;
   min-height: 100svh;
   overflow-x: clip;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -51,6 +53,23 @@ main {
 .section-small {
   font-weight: 700;
   font-size: 1.25rem;
+  color: #fff;
+}
+
+.section-separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 4rem auto;
+}
+.section-separator svg {
+  flex: 0 0 25svw;
+}
+
+.big-title {
+  font-weight: 700;
+  font-size: 6rem;
   color: #fff;
 }
 
@@ -70,15 +89,24 @@ main {
 }
 
 .btn {
-  background: #1347bb;
+  margin: 2.5rem 0 0 0;
   border-radius: 114px;
   padding: 1rem 2rem;
   display: flex;
+  align-items: center;
   gap: 0.5rem;
   cursor: pointer;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 2rem;
   color: #fff;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  transition: all 0.3s ease;
+  position: relative;
+  top: -5px;
+}
+.btn:hover {
+  top: 0;
 }
 
 .hero {
@@ -92,7 +120,7 @@ main {
   display: flex;
   flex-direction: column;
   background-image: url(../../images/bubbles.png);
-  background-size: cover;
+  background-size: 75%;
   min-width: 0;
   text-align: center;
   width: min(100% - 4rem, 1170px);
@@ -234,4 +262,105 @@ main {
   color: #fff;
   opacity: 0;
   transition: opacity 0.2s ease;
+}
+
+.link {
+  overflow: hidden;
+}
+.link .container {
+  display: flex;
+  align-items: center;
+  max-height: 550px;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  position: relative;
+}
+.link.odd .container {
+  flex-direction: row-reverse;
+}
+.link.poker {
+  background: linear-gradient(270deg, rgba(235, 168, 94, 0.9) 35%, rgba(0, 0, 0, 0.9) 105%), url("../../images/poker.png") center center no-repeat;
+  background-size: 110%;
+}
+.link.poker .btn {
+  background: #ef832f;
+}
+.link.poker .btn:hover {
+  box-shadow: 0 0 35px 0 rgba(244, 146, 69, 0.3);
+  background: #f49245;
+}
+.link.family .btn {
+  background: #2e60e9;
+}
+.link.family .btn:hover {
+  box-shadow: 0 0 35px 0 rgba(62, 110, 240, 0.3);
+  background: #3e6ef0;
+}
+.link.news .btn {
+  background: #0c6e47;
+}
+.link.news .btn:hover {
+  box-shadow: 0 0 35px 0 rgba(22, 117, 79, 0.3);
+  background: #16754f;
+}
+.link.pc .btn {
+  background: #8633f9;
+}
+.link.pc .btn:hover {
+  box-shadow: 0 0 35px 0 rgba(148, 71, 255, 0.3);
+  background: #9447ff;
+}
+.link.mic .btn {
+  background: #1347bb;
+}
+.link.mic .btn:hover {
+  box-shadow: 0 0 35px 0 rgba(38, 86, 191, 0.3);
+  background: #2656bf;
+}
+.link img {
+  position: relative;
+  top: -20%;
+  flex: 1 1 50svw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+.link__text {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+}
+.link__text h4 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #fff;
+}
+.link__text h4::before {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  background-color: #fff;
+  width: 89px;
+}
+.link__text h2 {
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 112%;
+  text-transform: uppercase;
+  color: #fff;
+}
+.link__text h3 {
+  font-weight: 400;
+  font-size: 1.375rem;
+  color: #fff;
+}
+.link__text a {
+  display: flex;
+  gap: 1rem;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

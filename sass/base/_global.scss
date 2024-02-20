@@ -56,6 +56,7 @@ $text-56: 3.5rem;
 $text-60: 3.75rem;
 $text-64: 4rem;
 $text-80: 5rem;
+$text-96: 6rem;
 $container-width: min(100% - 4rem, 1400px);
 // Classes
 :root {}
@@ -73,9 +74,11 @@ $container-width: min(100% - 4rem, 1400px);
 
 body {
 	color: #FFF;
-	background: #171717;
+	background: #080808;
     min-height: 100svh;
     overflow-x: clip;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -87,6 +90,24 @@ main {
 	font-size: $text-20;
 	color: #fff;
 }
+
+.section-separator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 4rem auto;
+    & svg{
+        flex: 0 0 25svw;
+    }
+}
+
+.big-title{
+    font-weight: 700;
+    font-size: $text-96;
+    color: #fff;
+}
+
 
 .section-title{
 	font-weight: 700;
@@ -104,14 +125,22 @@ main {
 }
 
 .btn{
-	background: #1347bb;
+    margin: 2.5rem 0 0 0;
 	border-radius: 114px;
 	padding: 1rem 2rem;
 	display: flex;
+    align-items: center;
 	gap: .5rem;
-   cursor: pointer;
-   font-weight: 700;
-	font-size: 32px;
+    cursor: pointer;
+    font-weight: 700;
+	font-size: $text-32;
 	color: #fff;
+    max-width: fit-content;
+    transition: all .3s ease;
+    position: relative;
+    top: -5px;
+    &:hover{
+        top: 0;
+    }
 }
 
