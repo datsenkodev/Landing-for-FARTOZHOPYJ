@@ -9,6 +9,9 @@ class Slider {
 		this.sliderContainer = container;
 		this.sliderControls = controls;
 		this.sliderArray = [...items];
+
+		this.sliderContainer.addEventListener('mousewheel', this.handleMouseWheel.bind(this));
+		this.sliderContainer.addEventListener('DOMMouseScroll', this.handleMouseWheel.bind(this));
 	}
 
 	updateSlider(){
@@ -31,7 +34,7 @@ class Slider {
 	}
 
 	setCurrentState(direction){
-		if(direction.className == 'slider-controls-previous'){
+		if(direction.className == 'slider-controls-previous' || direction == 'previous'){
 			this.sliderArray.unshift(this.sliderArray.pop());
 		} else {
 			this.sliderArray.push(this.sliderArray.shift());
@@ -51,12 +54,30 @@ class Slider {
 		triggers.forEach(control => {
 			control.addEventListener('click', e => {
 				e.preventDefault();
-				this.setCurrentState(control);
+				const direction = control.className.includes('previous') ? 'previous' : 'next';
+				this.setCurrentState(direction);
 			})
 		})
 	}
-}
 
-const heroSlider = new Slider(sliderContainer, sliderItems, sliderControls)
-heroSlider.setControls()
-heroSlider.useControls()
+	handleMouseWheel(e) {
+		e.preventDefault();
+		const direction = this.detectMouseWheelDirection(e);
+		if (direction) {
+			this.setCurrentState(direction);
+		}
+	 }
+
+	detectMouseWheelDirection(e) {
+		console.log(e.deltaY)
+		if (e.deltaY) {
+			return e.deltaY > 0 ? 'previous' : 'next';
+		}
+		return e.detail > 0 ? 'previous' : 'next';
+	}
+ }
+ 
+ const heroSlider = new Slider(sliderContainer, sliderItems, sliderControls)
+ heroSlider.setControls()
+ heroSlider.useControls()
+ 

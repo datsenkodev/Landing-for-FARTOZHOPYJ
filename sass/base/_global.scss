@@ -13,9 +13,9 @@
     font-family: Montserrat, sans-serif;
 }
 html{
-   overflow-x: hidden;
-   scrollbar-width: thin;
-	scrollbar-color: #242424 rgba(0, 0, 0, 0.6);
+    overflow-x: hidden;
+    scrollbar-width: normal;
+    scrollbar-color: #333333 rgba(0, 0, 0, 0.6);
 }
 img{
     font-style: italic;
@@ -32,6 +32,7 @@ a{
 
 //font variables
 $text-8: .5rem;
+$text-10: .625rem;
 $text-12: .750rem;
 $text-14: .875rem;
 $text-16: 1rem;
@@ -59,14 +60,30 @@ $text-80: 5rem;
 $text-96: 6rem;
 $container-width: min(100% - 4rem, 1400px);
 // Classes
-:root {}
+:root{
+--centered-item-size: 27svh;
+}
+@keyframes bg-move {
+    0%{
+        filter: drop-shadow(0 0px 20px);
+    }
+    50%{
+        filter: drop-shadow(0 0 40px);
+    }
+    100%{
+        filter: drop-shadow(0 0 20px);
+    }
+}
 
 @mixin centeredPseudoElement{
     position: absolute;
 	top: 50%;
     transform: translateY(-50%);
 }
-
+::selection{
+    color: inherit;
+    background: rgba(255, 255, 255, 0.1);
+}
 .container {
     width: $container-width;
     margin: 0 auto;
@@ -83,11 +100,13 @@ body {
 
 main {
     flex: 1 1 auto;
+    scroll-snap-type: y proximity;
+    
 }
 
 .section-small{
 	font-weight: 700;
-	font-size: $text-20;
+	font-size: clamp($text-10, 0.5rem + 0.625vw, $text-20);
 	color: #fff;
 }
 
@@ -95,8 +114,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    margin: 4rem auto;
+    gap: 3svw;
+    margin-inline: auto;
+    padding: 4svh;
+    position: relative;
+    z-index: 2;
+    background-color: #0a0a0a;
     & svg{
         flex: 0 0 25svw;
     }
@@ -104,14 +127,15 @@ main {
 
 .big-title{
     font-weight: 700;
-    font-size: $text-96;
+    font-size: clamp($text-32, 1.2rem + 4vw, $text-96);
     color: #fff;
+    text-transform: uppercase;
 }
 
 
 .section-title{
 	font-weight: 700;
-	font-size: $text-80;
+	font-size: clamp($text-36, 1.7rem + 2.75vw, $text-80);
 	line-height: 112%;
 	text-transform: uppercase;
 	color: #fff;
@@ -120,7 +144,7 @@ main {
 
 .section-text{
 	font-weight: 400;
-	font-size: $text-22;
+	font-size: clamp($text-12, 0.625rem + 0.625vw, $text-22);
 	color: #fff;
 }
 
@@ -133,7 +157,7 @@ main {
 	gap: .5rem;
     cursor: pointer;
     font-weight: 700;
-	font-size: $text-32;
+	font-size: clamp($text-16, 0.8rem + 1vw,$text-32);
 	color: #fff;
     max-width: fit-content;
     transition: all .3s ease;

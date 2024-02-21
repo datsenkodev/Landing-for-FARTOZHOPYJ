@@ -1,0 +1,38 @@
+@media (max-width: 768px){
+	.bubble-container:nth-child(odd), .bubble-8, .bubble-9, .bubble-10{
+		display: none;
+	}
+}
+
+@media (max-width: 425px){
+	:root{
+		--centered-item-size: 140px;
+	}
+	.link {
+		padding: 3svh;
+		&.odd .container{
+			flex-direction: unset;
+		}
+		& img{
+			display: none;
+		}
+		& .container{
+			margin: 0;
+		}
+	}
+	.btn{
+		padding: .3rem 1rem;
+		& svg{
+			height: .75rem;
+			width: .75rem;
+		}
+	}
+	
+	 
+}
+@media (max-width: 375px){
+	.slider__item.item3, .slider__item.item7 {
+		opacity: 0;
+		pointer-events: none;
+	}
+}
