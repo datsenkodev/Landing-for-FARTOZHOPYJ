@@ -63,17 +63,6 @@ $container-width: min(100% - 4rem, 1400px);
 :root{
 --centered-item-size: 27svh;
 }
-@keyframes bg-move {
-    0%{
-        filter: drop-shadow(0 0px 20px);
-    }
-    50%{
-        filter: drop-shadow(0 0 40px);
-    }
-    100%{
-        filter: drop-shadow(0 0 20px);
-    }
-}
 
 @mixin centeredPseudoElement{
     position: absolute;

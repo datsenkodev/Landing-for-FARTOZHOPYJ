@@ -87,13 +87,15 @@
 		height: calc(var(--centered-item-size) * 0.6);
 		width: calc(var(--centered-item-size) * 0.6);
 		&.item1{
-			left: 15%;
+			left: 30%;
 			opacity: 0;
+			z-index: 0;
 			pointer-events: none;
 		}
 		&.item2{
 			left: 15%;
 			opacity: 0;
+			z-index: 0;
 			pointer-events: none;
 		}
 		&.item3{
@@ -140,18 +142,21 @@
 		&.item8{
 			left: 85%;
 			opacity: 0;
+			z-index: 0;
 			pointer-events: none;
 			transform: translateX(-50%);
 		}
 		&.item9{
-			left: 85%;
+			left: 70%;
 			opacity: 0;
+			z-index: 0;
 			pointer-events: none;
 			transform: translateX(-50%);
 		}
 		&.item10{
-			left: 85%;
+			left: 50%;
 			opacity: 0;
+			z-index: 0;
 			pointer-events: none;
 			transform: translateX(-50%);
 		}
@@ -195,6 +200,20 @@
 	}
 	&.poker{
 		background: linear-gradient(270deg, rgba(235,168,94, 0.9) 35%, rgba(0,0,0,0.9) 105%), url('../../images/poker.png') center center no-repeat;
+		& img{
+			@keyframes movePoker {
+				0%{
+					filter: drop-shadow(0 0 10px rgb(235,168,94))
+			  }
+			  50%{
+				filter: drop-shadow(0 0 60px rgb(235,168,94))
+			  }
+			  100%{
+					filter: drop-shadow(0 0 10px rgb(235,168,94))	
+			  }
+			}
+			animation: movePoker 3s ease infinite;
+		}
 		& .btn{
 			background: #ef832f;
 			&:hover{
@@ -205,6 +224,20 @@
 	}
 	&.family{
 		background: linear-gradient(90deg, rgba(23, 85, 141, 0.9) 35%, rgba(0,0,0,0.9) 105%), url('../../images/family.png') center center no-repeat;
+		& img{
+			@keyframes moveFamily {
+				0%{
+					filter: drop-shadow(0 0 30px rgb(23, 85, 141))
+			  }
+			  50%{
+				filter: drop-shadow(0 0 80px rgb(23, 85, 141))
+			  }
+			  100%{
+					filter: drop-shadow(0 0 30px rgb(23, 85, 141))	
+			  }
+			}
+			animation: moveFamily 3s ease infinite;
+		}
 		& .btn{
 			background: #2e60e9;
 			&:hover{
@@ -215,6 +248,20 @@
 	}
 	&.news{
 		background: linear-gradient(270deg, rgba(94, 235, 184, 0.9) 25%, rgba(4, 29, 24, 1) 100%), url('../../images/news.png') center center no-repeat;
+		& img{
+			@keyframes moveNews {
+				0%{
+					filter: drop-shadow(0 0 20px rgb(94, 235, 184))
+			  }
+			  50%{
+				filter: drop-shadow(0 0 60px rgb(94, 235, 184))
+			  }
+			  100%{
+					filter: drop-shadow(0 0 20px rgb(94, 235, 184))	
+			  }
+			}
+			animation: moveNews 3s ease infinite;
+		}
 		& .btn{
 			background: #0c6e47;
 			&:hover{
@@ -224,7 +271,21 @@
 		}
 	}
 	&.pc{
-		background: linear-gradient(90deg, rgba(82, 23, 141, 0.9) 35%, rgba(27, 4, 33, 0.9) 105%), url('../../images/pc.png') center center no-repeat;
+		background: linear-gradient(90deg, rgba(82, 23, 141, 0.95) 35%, rgba(27, 4, 33, 1) 105%), url('../../images/pc.png') center center no-repeat;
+		& img{
+			@keyframes movePc {
+				0%{
+					filter: drop-shadow(0 0 50px rgba(148, 71, 255, 0.8))
+			  }
+			  50%{
+				filter: drop-shadow(0 0 90px rgba(148, 71, 255, 0.8))
+			  }
+			  100%{
+					filter: drop-shadow(0 0 50px rgba(148, 71, 255, 0.8))	
+			  }
+			}
+			animation: movePc 3s ease infinite;
+		}
 		& .btn{
 			background: #8633f9;
 			&:hover{
@@ -235,6 +296,20 @@
 	}
 	&.mic{
 		background: linear-gradient(270deg, rgba(58, 71, 192, 0.9) 35%, rgba(0,0,0,0.9) 105%), url('../../images/mic.png') center center no-repeat;
+		& img{
+			@keyframes moveMic {
+				0%{
+					filter: drop-shadow(0 0 20px rgb(58, 71, 192))
+			  }
+			  50%{
+				filter: drop-shadow(0 0 60px rgb(58, 71, 192))
+			  }
+			  100%{
+					filter: drop-shadow(0 0 20px rgb(58, 71, 192))	
+			  }
+			}
+			animation: moveMic 3s ease infinite;
+		}
 		& .btn{
 			background: #1347bb;
 			&:hover{
@@ -245,6 +320,20 @@
 	}
 	&.vip{
 		background: linear-gradient(90deg, rgba(184, 171, 108, 0.9) 25%, rgba(0,0,0,0.9) 90%), url('../../images/mic.png') center center no-repeat;
+		& img{
+			@keyframes moveVip {
+				0%{
+					filter: drop-shadow(0 0 10px #f1cb70)
+			  }
+			  50%{
+				filter: drop-shadow(0 0 130px #f1cb70)
+			  }
+			  100%{
+					filter: drop-shadow(0 0 10px #f1cb70)	
+			  }
+			}
+			animation: moveVip 3s ease infinite;
+		}
 		& .btn{
 			background: #9a834d;
 			&:hover{
@@ -255,6 +344,20 @@
 	}
 	&.chajka{
 		background: linear-gradient(270deg, rgba(156, 166, 255, 1) 35%, rgba(93, 111, 244, 0.9) 105%), url('../../images/mic.png') center center no-repeat;
+		& img{
+			@keyframes moveChajka {
+				0%{
+					filter: drop-shadow(0 0 10px rgb(93, 111, 244))
+			  }
+			  50%{
+				filter: drop-shadow(0 0 130px rgb(93, 111, 244))
+			  }
+			  100%{
+					filter: drop-shadow(0 0 10px rgb(93, 111, 244))	
+			  }
+			}
+			animation: moveChajka 3s ease infinite;
+		}
 		& .btn{
 			background: #17387a;
 			&:hover{
@@ -265,6 +368,20 @@
 	}
 	&.club{
 		background: linear-gradient(270deg, rgba(78, 11, 80, 0.9) 35%, rgba(72, 39, 216, 0.9) 105%), url('../../images/mic.png') center center no-repeat;
+		& img{
+			@keyframes moveClub {
+				0%{
+					filter: drop-shadow(0 0 10px rgb(72, 39, 216))
+			  }
+			  50%{
+				filter: drop-shadow(0 0 90px rgb(72, 39, 216))
+			  }
+			  100%{
+					filter: drop-shadow(0 0 10px rgb(72, 39, 216))	
+			  }
+			}
+			animation: moveClub 3s ease infinite;
+		}
 		& .btn{
 			background: #6153c8;
 			&:hover{
@@ -275,6 +392,20 @@
 	}
 	&.merch{
 		background: linear-gradient(270deg, rgba(229, 73, 73, 0.9) 35%, rgba(100, 25, 25, 0.9) 105%), url('../../images/mic.png') center center no-repeat;
+		& img{
+			@keyframes moveMerch {
+				0%{
+					filter: drop-shadow(0 0 10px rgb(229, 73, 73))
+			  }
+			  50%{
+				filter: drop-shadow(0 0 80px rgb(229, 73, 73))
+			  }
+			  100%{
+					filter: drop-shadow(0 0 10px rgb(229, 73, 73))	
+			  }
+			}
+			animation: moveMerch 3s ease infinite;
+		}
 		& .btn{
 			background: #a90d12;
 			&:hover{
@@ -285,6 +416,20 @@
 	}
 	&.exchange{
 		background: linear-gradient(270deg, rgba(26, 11, 80, 0.9) 35%, rgba(134, 104, 238, 0.9)	105%), url('../../images/mic.png') center center no-repeat;
+		& img{
+			@keyframes moveExchange {
+				0%{
+					filter: drop-shadow(0 0 20px rgb(134, 104, 238))
+			  }
+			  50%{
+				filter: drop-shadow(0 0 60px rgb(134, 104, 238))
+			  }
+			  100%{
+					filter: drop-shadow(0 0 20px rgb(134, 104, 238))	
+			  }
+			}
+			animation: moveExchange 3s ease infinite;
+		}
 		& .btn{
 			background: #8a76e1;
 			&:hover{
@@ -295,7 +440,6 @@
 	}
 
 	& img{
-		animation: bg-move infinite 3s ease-in-out;
 		position: relative;
 		top: -20%;
 		object-fit: cover;
