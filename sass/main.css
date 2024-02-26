@@ -12,6 +12,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   overflow-x: hidden;
   scrollbar-width: normal;
   scrollbar-color: #333333 rgba(0, 0, 0, 0.6);
@@ -342,13 +343,13 @@ main {
 }
 @keyframes moveFamily {
   0% {
-    filter: drop-shadow(0 0 30px rgb(23, 85, 141));
+    filter: drop-shadow(0 0 10px rgb(11, 47, 78));
   }
   50% {
-    filter: drop-shadow(0 0 80px rgb(23, 85, 141));
+    filter: drop-shadow(0 0 80px rgb(11, 47, 78));
   }
   100% {
-    filter: drop-shadow(0 0 30px rgb(23, 85, 141));
+    filter: drop-shadow(0 0 10px rgb(11, 47, 78));
   }
 }
 .link.family .btn {
@@ -726,6 +727,33 @@ main {
     opacity: 0;
   }
 }
+footer {
+  position: relative;
+  background-color: #242424;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+footer .container h3 {
+  font-weight: normal;
+  margin: 0 0 0.3rem 0;
+}
+footer .container p {
+  color: lightgrey;
+  font-size: 0.875rem;
+}
+footer img {
+  height: 20px;
+  position: absolute;
+  right: 0.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 @media (max-width: 1024px) {
   .hero .container .slider-controls button {
     transform: scale(1.6);

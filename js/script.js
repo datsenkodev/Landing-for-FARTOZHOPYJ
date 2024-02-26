@@ -18,6 +18,8 @@ class Slider {
 		this.xDown = null;
 		this.yDown = null;
 
+		this.autoScroll();
+
 		this.addTouchEventListeners();
 	}
 
@@ -96,6 +98,13 @@ class Slider {
 		
 	}
 
+	autoScroll(){
+		setTimeout(() => {
+			this.setCurrentState('next')
+			this.autoScroll()
+		}, 3000)
+	}
+
 	useControls() {
 		const triggers = [...sliderControlsContainer.childNodes];
 		triggers.forEach(control => {
@@ -158,6 +167,6 @@ class Slider {
  }
  
  const heroSlider = new Slider(sliderContainer, sliderItems, sliderControls)
- heroSlider.setControls()
- heroSlider.useControls()
+ heroSlider.setControls();
+ heroSlider.useControls();
  heroSlider.addTouchEventListeners();

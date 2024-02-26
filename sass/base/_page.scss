@@ -207,13 +207,13 @@
 		& img{
 			@keyframes moveFamily {
 				0%{
-					filter: drop-shadow(0 0 30px rgb(23, 85, 141))
+					filter: drop-shadow(0 0 10px rgb(11, 47, 78))
 			  }
 			  50%{
-				filter: drop-shadow(0 0 80px rgb(23, 85, 141))
+				filter: drop-shadow(0 0 80px rgb(11, 47, 78))
 			  }
 			  100%{
-					filter: drop-shadow(0 0 30px rgb(23, 85, 141))	
+					filter: drop-shadow(0 0 10px rgb(11, 47, 78))	
 			  }
 			}
 			animation: moveFamily 3s ease infinite;
@@ -582,5 +582,32 @@
 	100% {
 	  	transform: translateY(-100svh) scale(1.5);
 	  	opacity: 0;
+	}
+ }
+
+ footer {
+	position: relative;
+	background-color: #242424;
+	& .container{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem 0;
+		& h3{
+			font-weight: normal;
+			margin: 0 0 .3rem 0;
+		}
+		& p{
+			color: lightgrey;
+			font-size: $text-14;
+		}
+	}
+	& img{
+		height: 20px;
+		position: absolute;
+		right: .3rem;
+		top: 50%;
+		transform: translateY(-50%);
 	}
  }
