@@ -474,6 +474,11 @@
 			<img src="./images/exchange.png" alt="P2P обмінник для поповнення та виведення ігрової валюти з покер румів">
 		</div>
 	</section>
+	<button class="back-to-top" type="button">
+		<span class="circle">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="fa"><path fill="#6C3EB8" d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+	 </span>
+	 <span class="pulse"></span></button>
 </main>
 <footer>
 	<div class="container">
@@ -493,6 +498,27 @@
 };
 
 	window.onload=randomize;
+</script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+	// Back to top
+var amountScrolled = 200;
+var amountScrolledNav = 25;
+
+$(window).scroll(function() {
+  if ( $(window).scrollTop() > amountScrolled ) {
+    $('button.back-to-top').addClass('show');
+  } else {
+    $('button.back-to-top').removeClass('show');
+  }
+});
+
+$('button.back-to-top').click(function() {
+  $('html, body').animate({
+    scrollTop: 0
+  }, 100);
+  return false;
+});
 </script>
 </body>
 
