@@ -10,6 +10,11 @@
 	.hero{
 		min-height: fit-content;
 	}
+	button.back-to-top{
+		transform: scale(0.8) rotate(180deg);
+		bottom: 1rem;
+		right: 1rem;
+	}
 }
 
 @media (max-width: 425px){
@@ -47,6 +52,23 @@
 			width: .75rem;
 		}
 	}
-	
+	button.back-to-top{
+		transform: scale(0.6) rotate(180deg);
+		bottom: 0;
+		right: 0;
+	}
 	 
 }
+@media (hover: none) {
+	button.back-to-top .circle {
+	  animation: circle 1s linear infinite;
+	}
+ 
+	button.back-to-top .fa {
+	  animation: arrow 1s linear infinite;
+	}
+ 
+	button.back-to-top .pulse {
+	  animation: pulse 2s linear infinite;
+	}
+ }

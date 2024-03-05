@@ -772,37 +772,15 @@ button.back-to-top.show {
   pointer-events: all;
 }
 button.back-to-top:hover .circle {
-  animation-name: circle;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-play-state: running;
-  -webkit-animation-name: circle;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-delay: 0s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-  -webkit-animation-play-state: running;
+  animation: circle 1s linear infinite;
 }
 button.back-to-top:hover .fa {
-  animation-name: arrow;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-play-state: running;
-  -webkit-animation-name: arrow;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-delay: 0s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-  -webkit-animation-play-state: running;
+  animation: arrow 1s linear infinite;
 }
+button.back-to-top:hover .pulse {
+  animation: pulse 2s linear infinite;
+}
+
 .circle {
   background-color: #fff;
   height: 120px;
@@ -835,7 +813,7 @@ button.back-to-top:hover .fa {
   opacity: 0;
   width: 110px;
   height: 110px;
-  border: 10px solid #00baff;
+  border: 10px solid #6C3EB8;
   border-radius: 100px;
   /* Giving Animation Function */
   -o-border-image: initial;
@@ -873,6 +851,28 @@ button.back-to-top:hover .fa {
     height: 120px;
   }
 }
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  8% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  15% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  30% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
 @media (max-width: 1024px) {
   .hero .container .slider-controls button {
     transform: scale(1.6);
@@ -885,6 +885,11 @@ button.back-to-top:hover .fa {
   .hero {
     min-height: -moz-fit-content;
     min-height: fit-content;
+  }
+  button.back-to-top {
+    transform: scale(0.8) rotate(180deg);
+    bottom: 1rem;
+    right: 1rem;
   }
 }
 @media (max-width: 425px) {
@@ -921,5 +926,21 @@ button.back-to-top:hover .fa {
   .btn svg {
     height: 0.75rem;
     width: 0.75rem;
+  }
+  button.back-to-top {
+    transform: scale(0.6) rotate(180deg);
+    bottom: 0;
+    right: 0;
+  }
+}
+@media (hover: none) {
+  button.back-to-top .circle {
+    animation: circle 1s linear infinite;
+  }
+  button.back-to-top .fa {
+    animation: arrow 1s linear infinite;
+  }
+  button.back-to-top .pulse {
+    animation: pulse 2s linear infinite;
   }
 }/*# sourceMappingURL=main.css.map */
