@@ -786,7 +786,7 @@ button.back-to-top:hover .pulse {
   height: 120px;
   width: 120px;
   display: block;
-  border: 5px solid #6C3EB8;
+  border: 5px solid #6c3eb8;
   border-radius: 100px;
   position: absolute;
   bottom: 0;
@@ -813,7 +813,7 @@ button.back-to-top:hover .pulse {
   opacity: 0;
   width: 110px;
   height: 110px;
-  border: 10px solid #6C3EB8;
+  border: 10px solid #6c3eb8;
   border-radius: 100px;
   /* Giving Animation Function */
   -o-border-image: initial;
